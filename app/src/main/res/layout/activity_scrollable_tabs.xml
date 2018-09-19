@@ -20,7 +20,11 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabMode="scrollable"/>
+            android:background="@drawable/tab_border"
+            android:textAlignment="center"
+            app:tabGravity="fill"
+            app:tabMode="scrollable"
+            app:tabTextAppearance="@style/MyCustomTabText" />
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager

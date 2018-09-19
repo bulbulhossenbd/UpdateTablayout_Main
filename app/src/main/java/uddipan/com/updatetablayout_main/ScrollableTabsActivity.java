@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,9 +36,15 @@ public class ScrollableTabsActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new OneFragment(), "ONE");
-        adapter.addFrag(new TwoFragment(), "TWO");
-        adapter.addFrag(new ThreeFragment(), "THREE");
+        adapter.addFrag(new OneFragment(), "মাঠ ফসল");
+        adapter.addFrag(new TwoFragment(), "উদ্যান ফসল");
+        adapter.addFrag(new ThreeFragment(), "ভেষজ ফসল");
+        adapter.addFrag(new ThreeFragment(), "ভেষজ ফসল");
+        adapter.addFrag(new ThreeFragment(), "বনজ ফসল");
+        adapter.addFrag(new ThreeFragment(), "ফুল");
+        adapter.addFrag(new ThreeFragment(), "ফল");
+        adapter.addFrag(new ThreeFragment(), "শাকসবজি");
+        adapter.addFrag(new ThreeFragment(), "অন্যান্য ফসল");
         viewPager.setAdapter(adapter);
     }
 
@@ -69,6 +74,7 @@ public class ScrollableTabsActivity extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
+
         }
     }
 }
